@@ -140,5 +140,8 @@ public class Paciente {
     }
 
 
+//    public String toString (){
+//        return "Paciente [nombre=" + nombre + ", edad=" + edad + ", dni=" + dni + " "
+//    }
 
 }
