@@ -1,32 +1,20 @@
 package org.example;
 
-import java.util.Scanner;
-
 public class PacienteApp {
+
     static void main() {
 
+        Paciente patri = new Paciente();
 
-    }
+        System.out.println(patri.getDni());
 
-    public static void consultar_paciente (){
-        Scanner teclado = new Scanner(System.in);
+        Paciente alejandro = new Paciente("alejandro",20,'L',100,170);
 
-        System.out.print("Intuduce tu nombre y apellidos: ");
-        String nombre_paciente = teclado.next();
+        System.out.println(alejandro.getSexo());
+        System.out.println(alejandro.calcularIMC());
 
-        System.out.print("Introduce tu edad: ");
-        int edad_paciente = teclado.nextInt();
-
-        System.out.print("Introduce tu sexo: ");
-        String sexo_paciente = teclado.next();
-
-        System.out.print("Introduce tu peso: ");
-        double peso_paciente = teclado.nextInt();
-
-        System.out.print("Introduce tu altura: ");
-        double altura_paciente = teclado.nextInt();
-
-
+        System.out.println(patri.esMayorDeEdad());
+        System.out.println(alejandro.esMayorDeEdad());
 
 
 
