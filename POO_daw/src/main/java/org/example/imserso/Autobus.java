@@ -14,14 +14,14 @@ public class Autobus {
         this.destino = destino;
         listaAbuelos = new ArrayList<>();
     }
-
-    public void insertarAbuelo(){
-        listaAbuelos.add(Abuelo);
-    }
-
-    public void borrarAbuelo(){
-        listaAbuelos.remove(Abuelo);
-    }
+//
+//    public void insertarAbuelo(){
+//        listaAbuelos.add(Abuelo);
+//    }
+//
+//    public void borrarAbuelo(){
+//        listaAbuelos.remove(Abuelo);
+//    }
 
     public void mostrarpasajeros(){
 
