@@ -24,6 +24,7 @@ public class Libros {
         this.id= ID_LIBRO;
         estudiantePrestado=null;
         this.editorial=editorial;
+        editorial.anyadirLibro(this);
     }
 
     public void Prestar(Estudiante estudiante){
