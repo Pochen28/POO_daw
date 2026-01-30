@@ -6,7 +6,9 @@ public class ChaletApp {
 
         pisito.crearHabitacion("cocina", 12.2);
         pisito.crearHabitacion("terraza", 4);
-        pisito.crearHabitacion("bano", 5.4);
+        pisito.crearHabitacion("despacho", 5.4);
+
+
     }
 
 

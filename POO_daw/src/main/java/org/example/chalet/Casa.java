@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Casa {
 
     private String direccion;
+
     public Casa (String direccion){
         this.direccion = direccion;
         listaHabitaciones = new ArrayList<>();
@@ -25,12 +26,28 @@ public class Casa {
             System.out.println("- " + habitacion.getNombre()+ " con " + habitacion.getMetrosCuadrados());
         }
     }
+
+    public Casa (String direccion){
+        this.direccion = direccion;
+    }
     public String getDireccion() {
         return direccion;
     }
 
+    public void getedad {
+
+
+    }
+
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+
+
+    }
+
+    public void setPropietario {
+
+
     }
 
     @Override
