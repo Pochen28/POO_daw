@@ -1,0 +1,96 @@
+@startuml
+package org.example.Biblio {
+
+    class Editorial {
+        - String pais
+        - String nombre
+        - ArrayList<Libros> listaDeLibros
+        + Editorial(String nombre, String pais)
+        + anyadirLibro(Libros libro)
+        + borrarLibro(Libros libro)
+        + getPais(): String
+        + setPais(String pais)
+        + getNombre(): String
+        + setNombre(String nombre)
+        + getListaDeLibros(): ArrayList<Libros>
+        + setListaDeLibros(ArrayList<Libros> listaDeLibros)
+        + toString(): String
+    }
+
+    class Estudiante {
+        - {static} int contadorEstudiantes
+        - String nombre
+        - String curso
+        - int nia
+        - String email
+        - ArrayList<Libros> listalibros
+        + Estudiante(String nombre, String curso, String email)
+        + Estudiante(String nombre)
+        + {static} validarcorreo(String email): boolean
+        + insertarlibro(Libros libros)
+        + borrarlibro(Libros libros)
+        + {static} getContadorEstudiantes(): int
+        + getNombre(): String
+        + setNombre(String nombre)
+        + getNia(): int
+        + setNia(int nia)
+        + getEmail(): String
+        + setEmail(String email)
+        + getCurso(): String
+        + setCurso(String curso)
+        + getLibros(): ArrayList<Libros>
+        + setListalibros(ArrayList<Libros> listalibros)
+        + toString(): String
+    }
+
+    class Libros {
+        - String titulo
+        - String autor
+        - String id
+        - boolean disponible
+        - {static} String ID_LIBRO
+        - {static} int cantidadLibros
+        - {static} int librosDisponible
+        + Libros(String titulo, String autor, Editorial editorial)
+        + Prestar(Estudiante estudiante)
+        + devolver()
+        - generarId(): String
+        + estaDisponible(): boolean
+        + {static} getCantidadLibros(): int
+        + {static} getLibrosDisponible(): int
+        + getId(): String
+        + getEstudiantePrestado(): Estudiante
+        + setEstudiantePrestado(Estudiante estudiante)
+        + getEditorial(): Editorial
+        + setEditorial(Editorial editorial)
+        + toString(): String
+    }
+
+    class Prestamo {
+        - LocalDateTime fecha
+        + Prestamo(Estudiante estudiante, Libros libros)
+        + getEstudiante(): Estudiante
+        + setEstudiante(Estudiante estudiante)
+        + getLibros(): Libros
+        + setLibros(Libros libros)
+        + getFecha(): LocalDateTime
+        + setFecha(LocalDateTime fecha)
+        + toString(): String
+    }
+
+    class EstudianteApp {
+        + {static} main()
+    }
+
+    ' Relaciones
+    Editorial "1" -- "*" Libros : gestiona >
+    Estudiante "1" -- "*" Libros : posee/alquila >
+    Libros "0..1" -- "0..1" Estudiante : prestado a >
+    Libros "*" -- "1" Editorial : pertenece a >
+    Prestamo "1" o-- "1" Libros : incluye >
+    Prestamo "1" o-- "1" Estudiante : realizado por >
+    EstudianteApp ..> Estudiante : usa >
+    EstudianteApp ..> Editorial : usa >
+
+}
+@enduml
