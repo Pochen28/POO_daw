@@ -9,9 +9,9 @@ public class Electrodomesticos {
     private String consumo;
     public ArrayList<Electrodomesticos> listaElectrodomesticos;
 
-    public Habitacion (String nombre, double){
-
-    }
+//    public Habitacion (String nombre, double){
+//
+//    }
 }
 
 
