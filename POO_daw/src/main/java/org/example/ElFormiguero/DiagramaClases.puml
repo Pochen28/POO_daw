@@ -1,0 +1,50 @@
+@startuml
+skinparam Style strictuml
+skinparam classAttributeIconSize 0
+
+class Cadena {
+  - nombre : String
+  - listaProgramas : ArrayList<Programa>
+  + agregarPrograma(p : Programa)
+  + eliminarPrograma(p : Programa)
+}
+
+class Programa {
+  - nombre : String
+  - temporadas : int
+  - listaEmpleados : ArrayList<Empleado>
+  - listaInvitados : ArrayList<Invitado>
+  - director : Empleado
+  + insertarEmpleado(nombre, cargo, director)
+  + insertarInvitado(nombre, profesion, temporada)
+  + invitadosTemporada(temporada)
+  + vecesInvitado(nombre) : int
+  + buscarInvitado(nombre) : boolean
+  {static} + invitadoAntes(nombre, p1, p2)
+}
+
+class Empleado {
+  - id : String
+  - nombre : String
+  - cargo : String
+  - director : Empleado
+  {static} - contador : int
+  - generarId() : String
+  + setCargo(cargo)
+}
+
+class Invitado {
+  - nombre : String
+  - profesion : String
+  - fecha_visita : LocalDate
+  - temporada : int
+  - solicitarFecha(nombre) : LocalDate
+}
+
+' Relaciones obligatorias según el PDF
+Cadena "1" o-- "0..*" Programa : agregación bidireccional
+Programa "1" *-- "1..*" Empleado : composición
+Programa "1" *-- "0..*" Invitado : composición
+Empleado "0..1" <-- "0..*" Empleado : director (jefe)
+
+@enduml

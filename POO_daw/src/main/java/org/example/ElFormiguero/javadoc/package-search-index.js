@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"org.example"},{"l":"org.example.ArrayList"},{"l":"org.example.Biblio"},{"l":"org.example.chalet"},{"l":"org.example.ElFormiguero"},{"l":"org.example.imserso"},{"l":"org.example.insti"},{"l":"org.example.PartidoTenis"}];updateSearchResults();
