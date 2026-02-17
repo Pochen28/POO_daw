@@ -6,6 +6,14 @@ import java.util.ArrayList;
 public class Editorial {
     private String pais;
     private String nombre;
+    private ArrayList<Libros> listaDeLibros;
+
+    public Editorial(String nombre,String pais){
+        this.nombre=nombre;
+        this.pais=pais;
+        this. listaDeLibros = new ArrayList<>();
+
+    }
 
     public ArrayList<Libros> getListaDeLibros() {
         return listaDeLibros;
@@ -15,15 +23,7 @@ public class Editorial {
         this.listaDeLibros = listaDeLibros;
     }
 
-    private ArrayList<Libros> listaDeLibros;
 
-
-    public Editorial(String nombre,String pais){
-        this.nombre=nombre;
-        this.pais=pais;
-        this. listaDeLibros = new ArrayList<>();
-
-    }
 
     public void anyadirLibro (Libros Libros){
         listaDeLibros.add(Libros);
