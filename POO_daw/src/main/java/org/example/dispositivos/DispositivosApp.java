@@ -3,7 +3,7 @@ package org.example.dispositivos;
 import java.util.ArrayList;
 
 public class DispositivosApp {
-    public static void main(){
+    public static void main(String[] args){
         ArrayList<Dispositivo> listaDispositivos = new ArrayList<>();
 
         listaDispositivos.add(new Televisor("LG Smart"));
