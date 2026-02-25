@@ -18,19 +18,16 @@ public class Paciente {
     private double peso;
     private int altura;
 
-    public Paciente (String nombre, int edad, char sexo, double peso, int altura){
-        this.nombre = nombre;
-        this.edad = edad;
-        this.dni = generarDNI();
-        this.sexo = comprobarSexo(sexo);
-        this.peso = peso;
-        this.altura = altura;
+    public Paciente(String alejandro, int i, char l, int i1, int i2) {
     }
 
-    public Paciente (){
-        this(null,0,DEF_SEXO,0,0);
+    public Paciente(String jkde, int i) {
     }
 
+
+//    public class Paciente(){
+//
+//    }
     private String generarDNI(){
 
         String dni = "";

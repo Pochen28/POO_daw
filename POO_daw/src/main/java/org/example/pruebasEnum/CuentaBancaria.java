@@ -10,7 +10,7 @@ public class CuentaBancaria {
     }
 
 
-    public int consultarCuenta (int saldo){
+    public int consultarCuenta (int saldo ){
         return saldo;
     }
     public void ingresarDinero (int saldo){

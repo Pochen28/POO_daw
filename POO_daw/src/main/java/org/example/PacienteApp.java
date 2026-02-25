@@ -4,7 +4,7 @@ public class PacienteApp {
 
     static void main() {
 
-        Paciente patri = new Paciente();
+        Paciente patri = new Paciente("jkde", 1 );
 
         System.out.println(patri.getDni());
 
