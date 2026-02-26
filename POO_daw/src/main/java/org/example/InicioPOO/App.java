@@ -13,5 +13,15 @@ public class App {
             System.out.println("Es menor de edad.");
         }
 
+        System.out.println(persona.nombreCompleto("Señor"));
+        System.out.println(persona.nombreCompleto());
+
+        Persona persona2 = new Persona("Manuel");
+
+        System.out.println(persona2.nombreCompleto("Señor"));
+        System.out.println(persona2.nombreCompleto());
+
+
+
     }
 }

@@ -8,11 +8,12 @@ public class Persona {
 
 
     public Persona (){
-        this.nombre = "";
-        this.apellidos = "";
-        this.edad = 0;
+        this ( "", "", 0 );
     }
 
+    public Persona(String nombre) {
+        this (nombre, "", 0);
+    }
 
     public Persona (String nombre, String apellidos, int edad) {
         if (edad<0){
@@ -45,13 +46,16 @@ public class Persona {
     }
 
     public void setEdad (int edad){
-
-
         this.edad = edad;
     }
 
     public String nombreCompleto (){
         return this.nombre + " " + this.apellidos;
+    }
+
+
+    public String nombreCompleto (String titulo){
+        return titulo + " " + this.nombre + " " + this.apellidos;
     }
 
     public boolean mayorEdad () {
