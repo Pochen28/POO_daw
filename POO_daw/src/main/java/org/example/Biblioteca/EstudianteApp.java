@@ -1,5 +1,4 @@
-
-package org.example.Biblio;
+package org.example.Biblioteca;
 
 public class EstudianteApp {
     static void main() {
@@ -15,5 +14,6 @@ public class EstudianteApp {
         Editorial anaya = new Editorial("Anaya", "España");
 
         System.out.println(ivan.getLibros());
+
     }
 }

@@ -1,37 +1,25 @@
-
-package org.example.Biblio;
+package org.example.Biblioteca;
 
 import java.util.ArrayList;
 
 public class Editorial {
     private String pais;
     private String nombre;
-    private ArrayList<Libros> listaDeLibros;
+    private ArrayList<Libros>listadelibros;
+
 
     public Editorial(String nombre,String pais){
         this.nombre=nombre;
         this.pais=pais;
-        this. listaDeLibros = new ArrayList<>();
-
+        this.listadelibros=new ArrayList<>();
     }
 
-    public ArrayList<Libros> getListaDeLibros() {
-        return listaDeLibros;
+    public void anyadirlibro(Libros libros){
+        listadelibros.add(libros);
     }
 
-    public void setListaDeLibros(ArrayList<Libros> listaDeLibros) {
-        this.listaDeLibros = listaDeLibros;
-    }
-
-
-
-    public void anyadirLibro (Libros Libros){
-        listaDeLibros.add(Libros);
-
-    }
-
-    public void borrarLibro (Libros Libros){
-        listaDeLibros.remove(Libros);
+    public void borrarlibro(Libros libros){
+        listadelibros.remove(libros);
     }
 
     public String getPais() {
@@ -49,13 +37,20 @@ public class Editorial {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    public ArrayList<Libros> getListadelibros() {
+        return listadelibros;
+    }
+
+    public void setListadelibros(ArrayList<Libros> listadelibros) {
+        this.listadelibros = listadelibros;
+    }
 
     @Override
     public String toString() {
         return "Editorial{" +
                 "nombre='" + nombre + '\'' +
                 ", pais='" + pais + '\'' +
-                ", libros='" + listaDeLibros +
+                "libros " + listadelibros +
                 '}';
     }
 

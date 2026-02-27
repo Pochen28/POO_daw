@@ -1,7 +1,5 @@
 package org.example.chalet;
 
-import org.example.Biblio.Libros;
-
 import java.util.ArrayList;
 
 public class Electrodomesticos {

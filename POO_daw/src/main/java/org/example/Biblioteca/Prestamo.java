@@ -1,8 +1,11 @@
-package org.example.Biblio;
+package org.example.Biblioteca;
+
+import lombok.Getter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Getter
 public class Prestamo {
 
     private  Libros libros;
@@ -16,24 +19,12 @@ public class Prestamo {
 
     }
 
-    public Estudiante getEstudiante() {
-        return estudiante;
-    }
-
     public void setEstudiante(Estudiante estudiante) {
         this.estudiante = estudiante;
     }
 
-    public Libros getLibros() {
-        return libros;
-    }
-
     public void setLibros(Libros libros) {
         this.libros = libros;
-    }
-
-    public LocalDateTime getFecha() {
-        return fecha;
     }
 
     public void setFecha(LocalDateTime fecha) {
