@@ -7,7 +7,7 @@ public class JuegoPalabrasIngles {
     static HashMap<String, String>diccionario = new HashMap<>();
     static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
-
+        
     }
 
     public static void cargarDiccionario() {
